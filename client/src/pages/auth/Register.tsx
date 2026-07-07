@@ -14,7 +14,7 @@ export const Register = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const user = await register(name, email, password, role);
+      const user = await register(name, email, password, role) as any;
       if(user?.role == "ADMIN"){
         navigate('/admin/dashboard');
       }

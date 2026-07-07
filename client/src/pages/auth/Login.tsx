@@ -13,7 +13,7 @@ export const Login = () => {
     e.preventDefault();
     try {
       console.log("Doing Login");
-      const user= await login(email, password);
+      const user= await login(email, password) as any;
       console.log("user is", user);
       if(user?.role == "ADMIN"){
         navigate('/admin/dashboard');
