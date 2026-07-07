@@ -3,7 +3,7 @@ import { Db, Document, MongoClient } from 'mongodb';
 
 dotenv.config();
 
-const uri = process.env.MONGODB_URI ;
+const uri = process.env.MONGODB_URI!;
 const dbName = process.env.DB_NAME ;
 
 let client: MongoClient | null = null;
