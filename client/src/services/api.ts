@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://job-tracker-backend-chi.vercel.app/api',
+  baseURL: 'https://job-tracker-backend-chi.vercel.app',
 });
 
 api.interceptors.request.use((config) => {

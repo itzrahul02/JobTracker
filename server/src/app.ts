@@ -23,11 +23,11 @@ app.use(express.json());
 
 app.get('/',(req,res)=>res.json({message:"Server is running"}))
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
-app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/jobs', jobRoutes);
-app.use('/api/applications', applicationRoutes);
-app.use('/api/dashboard', dashboardRoutes);
+app.use('/auth', authRoutes);
+app.use('/users', userRoutes);
+app.use('/jobs', jobRoutes);
+app.use('/applications', applicationRoutes);
+app.use('/dashboard', dashboardRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(errorHandler);
