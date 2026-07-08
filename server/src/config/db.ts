@@ -3,7 +3,7 @@ import { Db, Document, MongoClient } from 'mongodb';
 
 dotenv.config();
 
-const uri = process.env.MONGODB_URI!;
+const uri = process.env.MONGODB_URI ;
 const dbName = process.env.DB_NAME ;
 
 let client: MongoClient | null = null;
@@ -14,7 +14,7 @@ export const connectToDatabase = async () => {
     return database;
   }
 
-  client = new MongoClient(uri);
+  client = new MongoClient(uri??"mongodb+srv://rahulbikker_db_user:Rahul2064@cluster0.qlwcvq5.mongodb.net/");
   await client.connect();
   console.log("Database connected");
   database = client.db(dbName);
