@@ -17,7 +17,7 @@ dotenv.config();
 
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://job-tracker-rho-red.vercel.app/'}));
 app.use(morgan('dev'));
 app.use(express.json());
 
