@@ -41,9 +41,11 @@ docker compose up --build
 ```
 
 The app will be available at:
+- Deployed Link - https://job-tracker-rho-red.vercel.app
 - Frontend: http://localhost:5173
-- Backend: http://localhost:5000
-- Swagger: http://localhost:5000/api-docs
+- Backend: http://localhost:3000
+- Swagger: http://localhost:3000/api-docs
+
 
 ## Environment Variables
 
